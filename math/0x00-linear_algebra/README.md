@@ -8,10 +8,16 @@ Complete the source code :
 - You are not allowed to use any loops or conditional statements
 - Your program should be exactly 8 lines
 
-## 1-trim_me_down.py
+## 1. Trim Me Down
 Complete the source code :
 
 - the_middle should be a 2D matrix containing the 3rd and 4th columns of matrix
 - You are not allowed to use any conditional statements
 - You are only allowed to use one for loop
 - Your program should be exactly 6 lines
+
+## 2. Size Me Please
+Write a function def matrix_shape(matrix): that calculates the shape of a matrix:
+
+- You can assume all elements in the same dimension are of the same type/shape
+- The shape should be returned as a list of integers
