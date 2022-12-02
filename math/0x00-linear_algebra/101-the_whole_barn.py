@@ -9,6 +9,9 @@ def add_matrices(mat1, mat2):
         Return:
             the addition, None if matrices are of different shape
     """
+    if len(mat1) != len(mat2) and len(mat1[0]) != len(mat2[0]):
+        return None
+
     # add arrays
     if type(mat1[0]) == int:
         return add_arrays(mat1, mat2)
