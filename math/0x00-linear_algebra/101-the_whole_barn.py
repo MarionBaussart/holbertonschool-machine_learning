@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """script that adds two matrices"""
-import numpy as np
 
 
 def add_matrices(mat1, mat2):
@@ -10,10 +9,47 @@ def add_matrices(mat1, mat2):
         Return:
             the addition, None if matrices are of different shape
     """
-    matrice1 = np.array(mat1.copy())
-    matrice2 = np.array(mat2.copy())
-    if matrice1.shape == matrice2.shape:
-        sum = np.add(matrice1, matrice2)
-        return sum
+    # add arrays
+    if type(mat1[0]) == int:
+        return add_arrays(mat1, mat2)
+
+    # add 2D matrices
+    if type(mat1[0][0]) == int:
+        return add_matrices2D(mat1, mat2)
+
+    # get the lower matrice
+    sum = []
+    if type(mat1[0][0]) == list:
+        for i in range(len(mat1)):
+            sum.append(add_matrices(mat1[i], mat2[i]))
+            return sum
+
+
+def add_arrays(arr1, arr2):
+    """function that adds two arrays
+        Args:
+            arrays to add
+        Return:
+            the addition, None if arrays are of different shape
+    """
+    if len(arr1) == len(arr2):
+        result = [arr1[i] + arr2[i] for i in range(len(arr1))]
+        return result
+    else:
+        return None
+
+def add_matrices2D(mat1, mat2):
+    """function that adds two 2D matrices
+        Args:
+            matrices to add
+        Return:
+            the addition, None if matrices are of different shape
+    """
+    if len(mat1) == 0 or len(mat2) == 0:
+        return None
+    if len(mat1) == len(mat2) and len(mat1[0]) == len(mat2[0]):
+        result = [[mat1[i][j] + mat2[i][j] for j in range(len(mat1[0]))]
+                  for i in range(len(mat1))]
+        return result
     else:
         return None
