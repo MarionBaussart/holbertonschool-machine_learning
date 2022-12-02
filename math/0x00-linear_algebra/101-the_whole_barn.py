@@ -9,21 +9,24 @@ def add_matrices(mat1, mat2):
         Return:
             the addition, None if matrices are of different shape
     """
-    # add arrays
-    if type(mat1[0]) == int:
-        return add_arrays(mat1, mat2)
+    if len(mat1) == len(mat2):
 
-    # add 2D matrices
-    if type(mat1[0][0]) == int:
-        return add_matrices2D(mat1, mat2)
+        # add arrays
+        if type(mat1[0]) == int:
+            return add_arrays(mat1, mat2)
 
-    # get the lower matrice
-    sum = []
-    if type(mat1[0][0]) == list:
-        for i in range(len(mat1)):
-            sum.append(add_matrices(mat1[i], mat2[i]))
+        # add 2D matrices
+        if type(mat1[0][0]) == int:
+            return add_matrices2D(mat1, mat2)
+
+        # get the lower matrice
+        sum = []
+        if type(mat1[0][0]) == list:
+            for i in range(len(mat1)):
+                sum.append(add_matrices(mat1[i], mat2[i]))
             return sum
-
+    else:
+        return None
 
 def add_arrays(arr1, arr2):
     """function that adds two arrays
