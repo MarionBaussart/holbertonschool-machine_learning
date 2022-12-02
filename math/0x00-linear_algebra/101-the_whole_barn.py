@@ -28,6 +28,7 @@ def add_matrices(mat1, mat2):
     else:
         return None
 
+
 def add_arrays(arr1, arr2):
     """function that adds two arrays
         Args:
@@ -40,6 +41,7 @@ def add_arrays(arr1, arr2):
         return result
     else:
         return None
+
 
 def add_matrices2D(mat1, mat2):
     """function that adds two 2D matrices
