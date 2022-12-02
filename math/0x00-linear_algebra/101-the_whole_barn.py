@@ -9,7 +9,7 @@ def add_matrices(mat1, mat2):
         Return:
             the addition, None if matrices are of different shape
     """
-    if len(mat1) != len(mat2) and len(mat1[0]) != len(mat2[0]):
+    if matrix_shape(mat1) != matrix_shape(mat2):
         return None
 
     # add arrays
@@ -27,6 +27,20 @@ def add_matrices(mat1, mat2):
         for i in range(len(mat1)):
             sum.append(add_matrices(mat1[i], mat2[i]))
         return sum
+
+
+def matrix_shape(matrix):
+    """function that calculates the shape of a matrix
+        Args:
+            matrix: matrix to size
+        Return:
+            size of the matrix
+    """
+    size = []
+    while type(matrix) == list:
+        size.append(len(matrix))
+        matrix = matrix[0]
+    return size
 
 
 def add_arrays(arr1, arr2):
