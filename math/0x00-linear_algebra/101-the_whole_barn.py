@@ -21,7 +21,8 @@ def add_matrices(mat1, mat2):
 
         # get the lower matrice
         sum = []
-        if type(mat1[0][0]) == list:
+        if type(mat1[0][0]) == list and len(mat1) == len(mat2) and \
+           len(mat1[0]) == len(mat2[0]):
             for i in range(len(mat1)):
                 sum.append(add_matrices(mat1[i], mat2[i]))
             return sum
