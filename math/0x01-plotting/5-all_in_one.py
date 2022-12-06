@@ -72,4 +72,5 @@ ax4.set_xlim([0, 100])
 ax4.set_ylim([0, 30])
 ax4.set_xticks(np.arange(0, 100, step=10))
 
+plt.tight_layout()
 plt.show()
