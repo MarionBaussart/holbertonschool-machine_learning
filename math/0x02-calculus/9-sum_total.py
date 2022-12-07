@@ -9,10 +9,13 @@ def summation_i_squared(n):
         Return:
             the integer value of the sum, None if n is not a valid number
     """
-    if type(n) != int or n < 1:
+    if type(n) != int or n < 0:
         return None
 
     if n == 1:
         return 1
+
+    if n == 0:
+        return 0
 
     return summation_i_squared(n - 1) + n ** 2
