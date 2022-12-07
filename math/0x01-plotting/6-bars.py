@@ -21,7 +21,7 @@ for i in range(len(fruit)):
             label=fruits_names[i])
 
 plt.ylim([0, 80])
-plt.yticks(np.arange(0, 80, step=10))
+plt.yticks(np.arange(0, 81, step=10))
 plt.xticks(np.arange(len(names)), names)
 
 plt.title("Number of Fruit per Person")

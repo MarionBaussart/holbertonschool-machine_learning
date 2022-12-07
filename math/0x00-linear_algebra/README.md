@@ -131,7 +131,7 @@ Write a function ``def add_matrices(mat1, mat2):`` that adds two matrices:
 - If matrices are not the same shape, return None
 - You can assume that mat1 and mat2 will never be empty
 
-## 17. Squashed Like Sardines
+## 17. Squashed Like Sardines (in progress)
 Write a function ``def cat_matrices(mat1, mat2, axis=0):`` that concatenates two matrices along a specific axis:
 
 - You can assume that mat1 and mat2 are matrices containing ints/floats
