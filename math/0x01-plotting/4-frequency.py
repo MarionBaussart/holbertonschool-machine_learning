@@ -11,7 +11,7 @@ plt.title("Project A")
 
 plt.xlim([0, 100])
 plt.ylim([0, 30])
-plt.hist(student_grades, range=(0, 101), bins=10, color="steelblue",
+plt.hist(student_grades, range=(0, 100), bins=10, color="steelblue",
          edgecolor="black")
 plt.xticks(np.arange(0, 101, step=10))
 
