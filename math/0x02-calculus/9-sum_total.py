@@ -12,7 +12,7 @@ def summation_i_squared(n):
     if type(n) == int:
         if n == 1:
             return 1
-        if n < 0:
+        if n < 1:
             return None
         return int(summation_i_squared(n - 1) + n ** 2)
     else:
