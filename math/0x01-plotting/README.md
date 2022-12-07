@@ -86,3 +86,6 @@ Complete the source code to create a scatter plot of sampled elevations on a mou
 - A colorbar should be used to display elevation
 - The colorbar should be labeled elevation (m)
 ![Getting Started](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/9/209d635d81bc43ca9ba5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20221205%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20221205T193830Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=aa4f2dd1fad48f145663b07baa95daf7dd147253d4265054e1f2f12c3d3c7e7b)
+
+## 8. PCA
+![Getting Started](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/9/a5834eeaf3eaa42c6530.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20221205%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20221205T193830Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a5e261ce8e77a1cb5fd7d40b9227dce8769f14c7bf0797ae1fc4b3848df16985)
