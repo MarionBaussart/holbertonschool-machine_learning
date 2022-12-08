@@ -12,7 +12,7 @@ def poly_integral(poly, C=0):
             of the polynomial
     """
     if type(poly) != list or poly == [0] or \
-       len(poly) == 0 or type(C) != int and type(C) != float:
+       len(poly) == 0 or type(C) != int:
         return None
 
     integral = [C]
