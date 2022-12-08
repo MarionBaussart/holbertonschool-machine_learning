@@ -11,9 +11,11 @@ def poly_integral(poly, C=0):
             a new list of coefficients representing the integral
             of the polynomial
     """
-    if type(poly) != list or poly == [0] or \
-       len(poly) == 0 or type(C) != int:
+    if type(poly) != list or len(poly) == 0 or type(C) != int:
         return None
+
+    if poly == [0]:
+        return [C]
 
     integral = [C]
     for i in range(len(poly)):
