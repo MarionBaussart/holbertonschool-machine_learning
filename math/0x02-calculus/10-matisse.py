@@ -10,7 +10,7 @@ def poly_derivative(poly):
             a new list of coefficients representing the derivative
             of the polynomial
     """
-    if type(poly) != list:
+    if type(poly) != list or len(poly) == 0:
         return None
 
     if len(poly) == 1:
