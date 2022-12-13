@@ -88,10 +88,10 @@ class Normal:
         arg = z / (2 ** (1 / 2))
         factor = (2 / (π ** (1 / 2)))
         integral = (arg -
-                 ((arg ** 3) / 3) +
-                 ((arg ** 5) / 10) -
-                 ((arg ** 7) / 42) +
-                 ((arg ** 9) / 216))
+                    ((arg ** 3) / 3) +
+                    ((arg ** 5) / 10) -
+                    ((arg ** 7) / 42) +
+                    ((arg ** 9) / 216))
         erf = factor * integral
 
         cdf = (1 / 2) + (erf / 2)
