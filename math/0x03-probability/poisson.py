@@ -15,7 +15,7 @@ class Poisson:
             lambtha: instance attribute, expected number of occurences
             in a given time frame
         """
-        if not data or data is None:
+        if data is None:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
             else:
@@ -23,7 +23,7 @@ class Poisson:
         else:
             if type(data) != list:
                 raise TypeError("data must be a list")
-            elif len(data) < 2:
+            if len(data) < 2:
                 raise ValueError("data must contain multiple values")
             else:
                 mean = sum(data) / len(data)
