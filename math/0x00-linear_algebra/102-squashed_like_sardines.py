@@ -29,3 +29,6 @@ def cat_matrices(mat1, mat2, axis=0):
             else:
                 return None
         return matrix
+
+    # axis more than 1
+
