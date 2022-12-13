@@ -18,7 +18,7 @@ class Normal:
             stddev: the standard deviation of the distribution (sigma)
                 stddev = sqrt(Somme(x - mean)² / effectif)
         """
-        if not data or data is None:
+        if data is None:
             if stddev < 0:
                 raise ValueError("stddev must be a positive value")
             else:
