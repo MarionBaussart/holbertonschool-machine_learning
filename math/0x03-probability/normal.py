@@ -19,7 +19,7 @@ class Normal:
                 stddev = sqrt(Somme(x - mean)² / effectif)
         """
         if data is None:
-            if stddev < 0:
+            if stddev <= 0:
                 raise ValueError("stddev must be a positive value")
             else:
                 self.mean = float(mean)
