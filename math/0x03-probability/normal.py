@@ -84,8 +84,7 @@ class Normal:
         if x < 0:
             return 0
 
-        z = (x - self.mean) / self.stddev
-        arg = z / (2 ** (1 / 2))
+        arg = (x - self.mean) / (self.stddev * (2 ** (1 / 2)))
         factor = 2 / (π ** (1 / 2))
         integral = (arg -
                     ((arg ** 3) / 3) +
@@ -94,6 +93,6 @@ class Normal:
                     ((arg ** 9) / 216))
         erf = factor * integral
 
-        cdf = (1 / 2) + (erf / 2)
+        cdf = (1 / 2) * (1 + erf)
 
         return cdf
