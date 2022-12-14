@@ -81,9 +81,6 @@ class Normal:
         Return:
             the CDF value for x
         """
-        if x < 0:
-            return 0
-
         arg = (x - self.mean) / (self.stddev * (2 ** (1 / 2)))
         factor = 2 / (π ** (1 / 2))
         integral = (arg -
