@@ -32,7 +32,7 @@ class Neuron:
         if nx < 1:
             raise ValueError("nx must be a positive integer")
 
-        self.__W = np.random.randn(1, nx)
+        self.__W = np.expand_dims(np.random.randn(1, nx), axis=0)
         self.__b = 0
         self.__A = 0
 
