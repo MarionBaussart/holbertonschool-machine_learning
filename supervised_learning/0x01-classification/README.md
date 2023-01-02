@@ -168,3 +168,15 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - b2: The bias for the output neuron. Upon instantiation, it should be initialized to 0.
     - A2: The activated output for the output neuron (prediction). Upon instantiation, it should be initialized to 0.
     - Each private attribute should have a corresponding getter function (no setter function).
+
+## 10. NeuralNetwork Forward Propagation
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 9-neural_network.py):
+
+- Add the public method def forward_prop(self, X):
+    - Calculates the forward propagation of the neural network
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Updates the private attributes __A1 and __A2
+    - The neurons should use a sigmoid activation function
+    - Returns the private attributes __A1 and __A2, respectively
