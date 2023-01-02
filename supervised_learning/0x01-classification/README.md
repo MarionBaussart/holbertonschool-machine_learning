@@ -148,3 +148,23 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - W2: The weights vector for the output neuron. Upon instantiation, it should be initialized using a random normal distribution.
     - b2: The bias for the output neuron. Upon instantiation, it should be initialized to 0.
     - A2: The activated output for the output neuron (prediction). Upon instantiation, it should be initialized to 0.
+
+## 9. Privatize NeuralNetwork
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 8-neural_network.py):
+
+- class constructor: def __init__(self, nx, nodes):
+    - nx is the number of input features
+        - If nx is not an integer, raise a TypeError with the exception: nx must be an integer
+        - If nx is less than 1, raise a ValueError with the exception: nx must be a positive integer
+    - nodes is the number of nodes found in the hidden layer
+        - If nodes is not an integer, raise a TypeError with the exception: nodes must be an integer
+        - If nodes is less than 1, raise a ValueError with the exception: nodes must be a positive integer
+    - All exceptions should be raised in the order listed above
+- Private instance attributes:
+    - W1: The weights vector for the hidden layer. Upon instantiation, it should be initialized using a random normal distribution.
+    - b1: The bias for the hidden layer. Upon instantiation, it should be initialized with 0’s.
+    - A1: The activated output for the hidden layer. Upon instantiation, it should be initialized to 0.
+    - W2: The weights vector for the output neuron. Upon instantiation, it should be initialized using a random normal distribution.
+    - b2: The bias for the output neuron. Upon instantiation, it should be initialized to 0.
+    - A2: The activated output for the output neuron (prediction). Upon instantiation, it should be initialized to 0.
+    - Each private attribute should have a corresponding getter function (no setter function).
