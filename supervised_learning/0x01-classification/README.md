@@ -190,3 +190,16 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - A is a numpy.ndarray with shape (1, m) containing the activated output of the neuron for each example
     - To avoid division by zero errors, please use 1.0000001 - A instead of 1 - A
     - Returns the cost
+
+## 12. Evaluate NeuralNetwork
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 11-neural_network.py):
+
+- Add the public method def evaluate(self, X, Y):
+    - Evaluates the neural network’s predictions
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - Returns the neuron’s prediction and the cost of the network, respectively
+        - The prediction should be a numpy.ndarray with shape (1, m) containing the predicted labels for each example
+        - The label values should be 1 if the output of the network is >= 0.5 and 0 otherwise
