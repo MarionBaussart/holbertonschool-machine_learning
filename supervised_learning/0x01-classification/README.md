@@ -203,3 +203,17 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - Returns the neuron’s prediction and the cost of the network, respectively
         - The prediction should be a numpy.ndarray with shape (1, m) containing the predicted labels for each example
         - The label values should be 1 if the output of the network is >= 0.5 and 0 otherwise
+
+## 13. NeuralNetwork Gradient Descent
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 12-neural_network.py):
+
+- Add the public method def gradient_descent(self, X, Y, A1, A2, alpha=0.05):
+    - Calculates one pass of gradient descent on the neural network
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - A1 is the output of the hidden layer
+    - A2 is the predicted output
+    - alpha is the learning rate
+    - Updates the private attributes __W1, __b1, __W2, and __b2
