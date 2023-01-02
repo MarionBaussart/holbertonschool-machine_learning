@@ -74,8 +74,8 @@ class Neuron:
         sigmoid activation function :
             1 / 1 + e^(-x) with x = Sum(Wi*Xi + b) for i=0 to nx
         """
-        x = np.matmul(self.__W, X) + self.__b
-        self.__A = 1 / (1 + np.exp(-x))
+        z = np.matmul(self.__W, X) + self.__b
+        self.__A = 1 / (1 + np.exp(-z))
         return self.__A
 
     def cost(self, Y, A):
@@ -156,4 +156,9 @@ class Neuron:
             raise TypeError("alpha must be a float")
         if alpha < 0:
             raise ValueError("alpha must be positive")
-        self.__W = 
+
+        for i in range(iterations):
+            self.__A = self.forward_prop(X)
+            self.gradient_descent(X, Y, self.__A, alpha)
+
+        return self.evaluate(X, Y)

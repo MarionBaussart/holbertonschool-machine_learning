@@ -71,8 +71,8 @@ class Neuron:
         sigmoid activation function :
             1 / 1 + e^(-x) with x = Sum(Wi*Xi + b) for i=0 to nx
         """
-        x = np.matmul(self.__W, X) + self.__b
-        self.__A = 1 / (1 + np.exp(-x))
+        z = np.matmul(self.__W, X) + self.__b
+        self.__A = 1 / (1 + np.exp(-z))
         return self.__A
 
     def cost(self, Y, A):
