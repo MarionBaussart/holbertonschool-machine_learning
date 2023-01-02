@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import numpy as np
 """
 module containing class Neuron:
 Class constructor def __init__(self, nx)
@@ -7,6 +6,7 @@ Private instance attributes: __W, __b, __A
 Public method def forward_prop(self, X)
 Public method def cost(self, Y, A)
 """
+import numpy as np
 
 
 class Neuron:
