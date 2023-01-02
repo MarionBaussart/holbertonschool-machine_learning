@@ -3,6 +3,8 @@
 module containing class NeuralNetwork:
 Class constructor: def __init__(self, nx, nodes)
 Private instance attributes: __W1, __b1, __A1, __W2, __b2, __A2
+Public method def forward_prop(self, X)
+Public method def cost(self, Y, A)
 """
 import numpy as np
 
@@ -96,3 +98,38 @@ class NeuralNetwork:
         return private instance attribute __A2
         """
         return self.__A2
+
+    def forward_prop(self, X):
+        """
+        Public method that calculates the forward propagation of the neural
+            network
+        Args:
+            X: numpy.ndarray with shape (nx, m) that contains the input data
+            with nx: number of input features to the neuron
+            and m: number of examples
+        Returns the updated private attribute __A1 and __A2 with
+            sigmoid activation function :
+                1 / 1 + e^(-x) with x = Sum(Wi*Xi + b) for i=0 to nx
+        """
+        z1 = np.matmul(self.__W1, X) + self.__b1
+        self.__A1 = 1 / (1 + np.exp(-z1))
+        z2 = np.matmul(self.__W2, self.__A1) + self.__b2
+        self.__A2 = 1 / (1 + np.exp(-z2))
+        return self.__A1, self.__A2
+
+    def cost(self, Y, A):
+        """
+        Public method that calculates the cost of the model
+        using logistic regression
+        Args:
+            Y: numpy.ndarray with shape (1, m) that contains the correct labels
+                for the input data with m: number of examples
+            A: numpy.ndarray with shape (1, m) containing the activated output
+                of the neuron for each example
+        Returns the cost:
+            cost = -1/m * Sum(Yi*log(Ai) + (1-Yi)*log(1-Ai))
+        """
+        m = Y.shape[1]
+        cost = - (1 / m) * \
+            (np.sum((Y * np.log(A)) + (1 - Y) * np.log(1.0000001 - A)))
+        return cost

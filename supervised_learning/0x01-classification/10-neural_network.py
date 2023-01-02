@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""module containing class NeuralNetwork"""
+"""
+module containing class NeuralNetwork:
+Class constructor: def __init__(self, nx, nodes)
+Private instance attributes: __W1, __b1, __A1, __W2, __b2, __A2
+Public method def forward_prop(self, X)
+"""
 import numpy as np
 
 

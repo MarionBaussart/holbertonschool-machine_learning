@@ -180,3 +180,13 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - Updates the private attributes __A1 and __A2
     - The neurons should use a sigmoid activation function
     - Returns the private attributes __A1 and __A2, respectively
+
+## 11. NeuralNetwork Cost
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 10-neural_network.py):
+
+- Add the public method def cost(self, Y, A):
+    - Calculates the cost of the model using logistic regression
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - A is a numpy.ndarray with shape (1, m) containing the activated output of the neuron for each example
+    - To avoid division by zero errors, please use 1.0000001 - A instead of 1 - A
+    - Returns the cost
