@@ -269,3 +269,23 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - The 0th iteration should represent the state of the neuron before any training has occurred
     - You are allowed to use one loop
     - Returns the evaluation of the training data after iterations of training have occurred
+
+## 16. DeepNeuralNetwork
+Write a class DeepNeuralNetwork that defines a deep neural network performing binary classification:
+
+- class constructor: def __init__(self, nx, layers):
+    - nx is the number of input features
+        - If nx is not an integer, raise a TypeError with the exception: nx must be an integer
+        - If nx is less than 1, raise a ValueError with the exception: nx must be a positive integer
+    - layers is a list representing the number of nodes in each layer of the network
+        - If layers is not a list or an empty list, raise a TypeError with the exception: layers must be a list of positive integers
+        - The first value in layers represents the number of nodes in the first layer, …
+        - If the elements in layers are not all positive integers, raise a TypeError with the exception layers must be a list of positive integers
+    - All exceptions should be raised in the order listed above
+    - Sets the public instance attributes:
+        - L: The number of layers in the neural network.
+        - cache: A dictionary to hold all intermediary values of the network. Upon instantiation, it should be set to an empty dictionary.
+        - weights: A dictionary to hold all weights and biased of the network. Upon instantiation:
+            - The weights of the network should be initialized using the He et al. method and saved in the weights dictionary using the key W{l} where {l} is the hidden layer the weight belongs to
+            - The biases of the network should be initialized to 0’s and saved in the weights dictionary using the key b{l} where {l} is the hidden layer the bias belongs to
+    - You are allowed to use one loop
