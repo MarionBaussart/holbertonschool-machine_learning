@@ -237,3 +237,35 @@ Write a class NeuralNetwork that defines a neural network with one hidden layer 
     - Updates the private attributes __W1, __b1, __A1, __W2, __b2, and __A2
     - You are allowed to use one loop
     - Returns the evaluation of the training data after iterations of training have occurred
+
+## 15. Upgrade Train NeuralNetwork
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification (based on 14-neural_network.py):
+
+- Update the public method train to def train(self, X, Y, iterations=5000, alpha=0.05, verbose=True, graph=True, step=100):
+    - Trains the neural network
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - iterations is the number of iterations to train over
+        - if iterations is not an integer, raise a TypeError with the exception iterations must be an integer
+        - if iterations is not positive, raise a ValueError with the exception iterations must be a positive integer
+    - alpha is the learning rate
+        - if alpha is not a float, raise a TypeError with the exception alpha must be a float
+        - if alpha is not positive, raise a ValueError with the exception alpha must be positive
+    - Updates the private attributes __W1, __b1, __A1, __W2, __b2, and __A2
+    - verbose is a boolean that defines whether or not to print information about the training. If True, print Cost after {iteration} iterations: {cost} every step iterations:
+        - Include data from the 0th and last iteration
+    - graph is a boolean that defines whether or not to graph information about the training once the training has completed. If True:
+        - Plot the training data every step iterations as a blue line
+        - Label the x-axis as iteration
+        - Label the y-axis as cost
+        - Title the plot Training Cost
+        - Include data from the 0th and last iteration
+    - Only if either verbose or graph are True:
+        - if step is not an integer, raise a TypeError with the exception step must be an integer
+        - if step is not positive and less than or equal to iterations, raise a ValueError with the exception step must be positive and <= iterations
+    - All exceptions should be raised in the order listed above
+    - The 0th iteration should represent the state of the neuron before any training has occurred
+    - You are allowed to use one loop
+    - Returns the evaluation of the training data after iterations of training have occurred

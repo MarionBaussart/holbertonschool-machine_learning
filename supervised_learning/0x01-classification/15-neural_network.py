@@ -7,9 +7,11 @@ Public method: def forward_prop(self, X)
 Public method: def cost(self, Y, A)
 Public method: def evaluate(self, X, Y)
 Public method: def gradient_descent(self, X, Y, A1, A2, alpha=0.05)
-Public method: def train(self, X, Y, iterations=5000, alpha=0.05)
+Public method: def train(self, X, Y, iterations=5000, alpha=0.05,
+                         verbose=True, graph=True, step=100)
 """
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class NeuralNetwork:
@@ -187,7 +189,8 @@ class NeuralNetwork:
         self.__W2 = self.__W2 - (alpha * dw2)
         self.__b2 = self.__b2 - (alpha * db2)
 
-    def train(self, X, Y, iterations=5000, alpha=0.05):
+    def train(self, X, Y, iterations=5000, alpha=0.05,
+              verbose=True, graph=True, step=100):
         """
         Public method that trains the neural network
         Updates the private attributes __W1, __b1, __W2 and __b2
@@ -199,6 +202,11 @@ class NeuralNetwork:
                 for the input data
             iterations: the number of iterations to train over
             alpha: the learning rate
+            verbose: a boolean that defines whether or not to print information
+                about the training
+            graph: a boolean that defines whether or not to graph information
+                about the training once the training has completed.
+            step: the step of the training
         """
         if type(iterations) != int:
             raise TypeError("iterations must be an integer")
@@ -208,9 +216,30 @@ class NeuralNetwork:
             raise TypeError("alpha must be a float")
         if alpha < 0:
             raise ValueError("alpha must be positive")
+        if verbose or graph:
+            if type(step) != int:
+                raise TypeError("step must be an integer")
+            if step <= 0 or step >= iterations:
+                raise ValueError("step must be positive and <= iterations")
 
-        for i in range(iterations):
+        Cost = []
+        Iteration = []
+        for i in range(iterations + 1):
             self.__A1, self.__A2 = self.forward_prop(X)
             self.gradient_descent(X, Y, self.__A1, self.__A2, alpha)
+            cost = self.cost(Y, self.__A2)
+
+            if i % step == 0:
+                Cost.append(cost)
+                Iteration.append(i)
+                if verbose:
+                    print("Cost after ", i, " iterations: ", cost)
+
+        if graph:
+            plt.plot(Iteration, Cost, color='blue')
+            plt.xlabel("iteration")
+            plt.ylabel("cost")
+            plt.title("Training Cost")
+            plt.show()
 
         return self.evaluate(X, Y)
