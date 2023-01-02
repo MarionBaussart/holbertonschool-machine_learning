@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import numpy as np
 """
 module containing class Neuron:
 Class constructor def __init__(self, nx)
@@ -8,8 +7,8 @@ Public method def forward_prop(self, X)
 Public method def cost(self, Y, A)
 Public method def evaluate(self, X, Y)
 Public method def gradient_descent(self, X, Y, A, alpha=0.05)
-Public method def train(self, X, Y, iterations=5000, alpha=0.05)
 """
+import numpy as np
 
 
 class Neuron:
@@ -32,7 +31,7 @@ class Neuron:
         if nx < 1:
             raise ValueError("nx must be a positive integer")
 
-        self.__W = np.expand_dims(np.random.randn(1, nx), axis=0)
+        self.__W = np.random.randn(1, nx)
         self.__b = 0
         self.__A = 0
 
