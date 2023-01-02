@@ -1,6 +1,7 @@
 # 0x01-classification
 
 # Tasks
+# Single neuron performing binary classification
 ## 0. Neuron
 Write a class Neuron that defines a single neuron performing binary classification:
 
@@ -127,3 +128,23 @@ m is the number of examples
     - You are allowed to use one loop
     - You can use import matplotlib.pyplot as plt
     - Returns: the evaluation of the training data after iterations of training have occurred
+
+# Neural network with one hidden layer performing binary classification
+## 8. NeuralNetwork
+Write a class NeuralNetwork that defines a neural network with one hidden layer performing binary classification:
+
+- class constructor: def __init__(self, nx, nodes):
+    - nx is the number of input features
+        - If nx is not an integer, raise a TypeError with the exception: nx must be an integer
+        - If nx is less than 1, raise a ValueError with the exception: nx must be a positive integer
+    - nodes is the number of nodes found in the hidden layer
+        - If nodes is not an integer, raise a TypeError with the exception: nodes must be an integer
+        - If nodes is less than 1, raise a ValueError with the exception: nodes must be a positive integer
+    - All exceptions should be raised in the order listed above
+- Public instance attributes:
+    - W1: The weights vector for the hidden layer. Upon instantiation, it should be initialized using a random normal distribution.
+    - b1: The bias for the hidden layer. Upon instantiation, it should be initialized with 0’s.
+    - A1: The activated output for the hidden layer. Upon instantiation, it should be initialized to 0.
+    - W2: The weights vector for the output neuron. Upon instantiation, it should be initialized using a random normal distribution.
+    - b2: The bias for the output neuron. Upon instantiation, it should be initialized to 0.
+    - A2: The activated output for the output neuron (prediction). Upon instantiation, it should be initialized to 0.
