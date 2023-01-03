@@ -348,3 +348,14 @@ Write a class DeepNeuralNetwork that defines a deep neural network performing bi
     - Returns the neuron’s prediction and the cost of the network, respectively
         - The prediction should be a numpy.ndarray with shape (1, m) containing the predicted labels for each example
         - The label values should be 1 if the output of the network is >= 0.5 and 0 otherwise
+
+## 21. DeepNeuralNetwork Gradient Descent
+Write a class DeepNeuralNetwork that defines a deep neural network performing binary classification (based on 20-deep_neural_network.py):
+
+- Add the public method def gradient_descent(self, Y, cache, alpha=0.05):
+    - Calculates one pass of gradient descent on the neural network
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - cache is a dictionary containing all the intermediary values of the network
+    - alpha is the learning rate
+    - Updates the private attribute __weights
+    - You are allowed to use one loop

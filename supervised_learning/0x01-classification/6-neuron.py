@@ -7,6 +7,7 @@ Public method def forward_prop(self, X)
 Public method def cost(self, Y, A)
 Public method def evaluate(self, X, Y)
 Public method def gradient_descent(self, X, Y, A, alpha=0.05)
+Public method def train(self, X, Y, iterations=5000, alpha=0.05)
 """
 import numpy as np
 
