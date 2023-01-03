@@ -310,3 +310,18 @@ Write a class DeepNeuralNetwork that defines a deep neural network performing bi
             - The biases of the network should be initialized to 0‘s and saved in the __weights dictionary using the key b{l} where {l} is the hidden layer the bias belongs to
         - Each private attribute should have a corresponding getter function (no setter function).
     - You are allowed to use one loop
+
+## 18. DeepNeuralNetwork Forward Propagation
+Write a class DeepNeuralNetwork that defines a deep neural network performing binary classification (based on 17-deep_neural_network.py):
+
+- Add the public method def forward_prop(self, X):
+    - Calculates the forward propagation of the neural network
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Updates the private attribute __cache:
+        - The activated outputs of each layer should be saved in the __cache dictionary using the key A{l} where {l} is the hidden layer the activated output belongs to
+        - X should be saved to the cache dictionary using the key A0
+    - All neurons should use a sigmoid activation function
+    - You are allowed to use one loop
+    - Returns the output of the neural network and the cache, respectively
