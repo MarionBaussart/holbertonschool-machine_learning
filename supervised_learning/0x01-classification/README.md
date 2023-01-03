@@ -325,3 +325,13 @@ Write a class DeepNeuralNetwork that defines a deep neural network performing bi
     - All neurons should use a sigmoid activation function
     - You are allowed to use one loop
     - Returns the output of the neural network and the cache, respectively
+
+## 19. DeepNeuralNetwork Cost
+Write a class DeepNeuralNetwork that defines a deep neural network performing binary classification (based on 18-deep_neural_network.py):
+
+- Add the public method def cost(self, Y, A):
+    - Calculates the cost of the model using logistic regression
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - A is a numpy.ndarray with shape (1, m) containing the activated output of the neuron for each example
+    - To avoid division by zero errors, please use 1.0000001 - A instead of 1 - A
+    - Returns the cost
