@@ -22,7 +22,7 @@ class NeuralNetwork:
         Args:
             nx: the number of input features to the neuron
             nodes: the number of nodes found in the hidden layer
-        Public instance attributes:
+        Private instance attributes:
             W1: weights vector for the hidden layer
             b1: bias for the hidden layer
             A1: activated output of the hidden layer
