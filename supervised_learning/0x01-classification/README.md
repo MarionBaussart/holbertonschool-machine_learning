@@ -426,3 +426,17 @@ Write a function def one_hot_decode(one_hot): that converts a one-hot matrix int
     - classes is the maximum number of classes
     - m is the number of examples
 - Returns: a numpy.ndarray with shape (m, ) containing the numeric labels for each example, or None on failure
+
+## 26. Persistence is Key
+Update the class DeepNeuralNetwork (based on 23-deep_neural_network.py):
+
+- Create the instance method def save(self, filename):
+
+    - Saves the instance object to a file in pickle format
+    - filename is the file to which the object should be saved
+    - If filename does not have the extension .pkl, add it
+- Create the static method def load(filename):
+
+    - Loads a pickled DeepNeuralNetwork object
+    - filename is the file from which the object should be loaded
+    - Returns: the loaded object, or None if filename doesn’t exist
