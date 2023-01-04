@@ -227,8 +227,8 @@ class DeepNeuralNetwork:
         if filename[-4:] != ".pkl":
             filename = filename + ".pkl"
 
-        fileObject = open(filename, 'wb')
-        pickle.dump(self, fileObject)
+        with open(filename, 'wb') as fileObject:
+            pickle.dump(self, fileObject)
 
     @staticmethod
     def load(filename):
@@ -240,8 +240,8 @@ class DeepNeuralNetwork:
             the loaded object, or None if filename doesn't exist
         """
         try:
-            fileObject = open(filename, 'rb')
-            loadedObject = pickle.load(fileObject)
+            with open(filename, 'rb') as fileObject:
+                loadedObject = pickle.load(fileObject)
             return loadedObject
         except FileNotFoundError:
             return None
