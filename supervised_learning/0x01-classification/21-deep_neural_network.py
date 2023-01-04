@@ -149,11 +149,11 @@ class DeepNeuralNetwork:
             A = cache["A{}".format(i - 1)]
             dw = (1 / m) * np.matmul(dz, A.T)
             db = (1 / m) * np.sum(dz)
-            w = self.__weights["W{}".format(i)]
-            b = self.__weights["b{}".format(i)]
-            dz = np.matmul(w.T, dz) * (A * (1 - A))
 
-            new_w = w - (alpha * dw)
-            new_b = b - (alpha * db)
-            self.__weights["W{}".format(i)] = new_w
-            self.__weights["b{}".format(i)] = new_b
+            self.__weights["W{}".format(i)] = self.__weights["W{}".format(i)] \
+                - (alpha * dw)
+            self.__weights["b{}".format(i)] = self.__weights["b{}".format(i)] \
+                - (alpha * db)
+
+            dz = np.matmul(self.__weights["W{}".format(i)].T, dz) * \
+                (A * (1 - A))
