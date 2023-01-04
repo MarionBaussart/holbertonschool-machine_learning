@@ -42,7 +42,7 @@ class NeuralNetwork:
             raise ValueError("nodes must be a positive integer")
 
         self.__W1 = np.random.randn(nodes, nx)
-        self.__b1 = np.zeros([nodes, 1])
+        self.__b1 = np.zeros((nodes, 1))
         self.__A1 = 0
         self.__W2 = np.random.randn(1, nodes)
         self.__b2 = 0
@@ -174,7 +174,7 @@ class NeuralNetwork:
                 of the neuron for each example
             alpha: the learning rate
         """
-        m = X.shape[1]
+        m = Y.shape[1]
         dz2 = A2 - Y
         dw2 = (1 / m) * np.matmul(dz2, A1.T)
         db2 = (1 / m) * np.sum(dz2)
@@ -202,11 +202,11 @@ class NeuralNetwork:
         """
         if type(iterations) != int:
             raise TypeError("iterations must be an integer")
-        if iterations < 0:
+        if iterations <= 0:
             raise ValueError("iterations must be a positive integer")
         if type(alpha) != float:
             raise TypeError("alpha must be a float")
-        if alpha < 0:
+        if alpha <= 0:
             raise ValueError("alpha must be positive")
 
         for i in range(iterations):
