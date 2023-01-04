@@ -359,3 +359,23 @@ Write a class DeepNeuralNetwork that defines a deep neural network performing bi
     - alpha is the learning rate
     - Updates the private attribute __weights
     - You are allowed to use one loop
+
+## 22. Train DeepNeuralNetwork
+Write a class DeepNeuralNetwork that defines a deep neural network performing binary classification (based on 21-deep_neural_network.py):
+
+- Add the public method def train(self, X, Y, iterations=5000, alpha=0.05):
+    - Trains the deep neural network
+    - X is a numpy.ndarray with shape (nx, m) that contains the input data
+        - nx is the number of input features to the neuron
+        - m is the number of examples
+    - Y is a numpy.ndarray with shape (1, m) that contains the correct labels for the input data
+    - iterations is the number of iterations to train over
+        - if iterations is not an integer, raise a TypeError with the exception iterations must be an integer
+        - if iterations is not positive, raise a ValueError with the exception iterations must be a positive integer
+    - alpha is the learning rate
+        - if alpha is not a float, raise a TypeError with the exception alpha must be a float
+        - if alpha is not positive, raise a ValueError with the exception alpha must be positive
+    - All exceptions should be raised in the order listed above
+    - Updates the private attributes __weights and __cache
+    - You are allowed to use one loop
+    - Returns the evaluation of the training data after iterations of training have occurred
