@@ -142,18 +142,16 @@ class DeepNeuralNetwork:
             alpha: the learning rate
         """
         m = Y.shape[1]
-        A = cache["A{}".format(self.__L)]
-        dz = A - Y
+        dz = cache["A{}".format(self.__L)] - Y
 
         for i in range(self.__L, 0, -1):
             A = cache["A{}".format(i - 1)]
             dw = (1 / m) * np.matmul(dz, A.T)
             db = (1 / m) * np.sum(dz, axis=1, keepdims=True)
+            dz = np.matmul(self.__weights["W{}".format(i)].T, dz) * \
+                (A * (1 - A))
 
             self.__weights["W{}".format(i)] = self.__weights["W{}".format(i)] \
                 - (alpha * dw)
             self.__weights["b{}".format(i)] = self.__weights["b{}".format(i)] \
                 - (alpha * db)
-
-            dz = np.matmul(self.__weights["W{}".format(i)].T, dz) * \
-                (A * (1 - A))
