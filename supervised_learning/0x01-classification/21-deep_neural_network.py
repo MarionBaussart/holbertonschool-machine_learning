@@ -148,7 +148,7 @@ class DeepNeuralNetwork:
         for i in range(self.__L, 0, -1):
             A = cache["A{}".format(i - 1)]
             dw = (1 / m) * np.matmul(dz, A.T)
-            db = (1 / m) * np.sum(dz)
+            db = (1 / m) * np.sum(dz, axis=1, keepdims=True)
 
             self.__weights["W{}".format(i)] = self.__weights["W{}".format(i)] \
                 - (alpha * dw)
