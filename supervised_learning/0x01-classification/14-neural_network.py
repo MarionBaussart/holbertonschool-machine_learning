@@ -114,9 +114,9 @@ class NeuralNetwork:
             sigmoid activation function :
                 1 / 1 + e^(-x) with x = Sum(Wi*Xi + b) for i=0 to nx
         """
-        z1 = np.matmul(self.__W1, X) + self.__b1
+        z1 = np.matmul(X.T, self.__W1.T).T + self.__b1
         self.__A1 = 1 / (1 + np.exp(-z1))
-        z2 = np.matmul(self.__W2, self.__A1) + self.__b2
+        z2 = np.matmul(self.__A1.T, self.__W2.T).T + self.__b2
         self.__A2 = 1 / (1 + np.exp(-z2))
         return self.__A1, self.__A2
 
@@ -200,15 +200,17 @@ class NeuralNetwork:
             iterations: the number of iterations to train over
             alpha: the learning rate
         """
-        if type(iterations) is not int:
+        if type(iterations) != int:
             raise TypeError("iterations must be an integer")
-        if iterations < 1:
+        if iterations < 0:
             raise ValueError("iterations must be a positive integer")
-        if type(alpha) is not float:
+        if type(alpha) != float:
             raise TypeError("alpha must be a float")
-        if alpha <= 0:
+        if alpha < 0:
             raise ValueError("alpha must be positive")
+
         for i in range(iterations):
-            A1, A2 = self.forward_prop(X)
-            self.gradient_descent(X, Y, A1, A2, alpha)
+            self.__A1, self.__A2 = self.forward_prop(X)
+            self.gradient_descent(X, Y, self.__A1, self.__A2, alpha)
+
         return self.evaluate(X, Y)
