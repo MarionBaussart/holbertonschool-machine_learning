@@ -4,7 +4,6 @@ module containing class DeepNeuralNetwork
 """
 import matplotlib.pyplot as plt
 import numpy as np
-import os
 import pickle
 
 
@@ -241,10 +240,10 @@ class DeepNeuralNetwork:
         Return:
             the loaded object, or None if filename doesn't exist
         """
-        if os.path.isfile(filename):
+        try:
             fileObject = open(filename, 'rb')
             loadedObject = pickle.load(fileObject)
             fileObject.close()
             return loadedObject
-        else:
+        except FileNotFoundError:
             return None
