@@ -224,11 +224,14 @@ class DeepNeuralNetwork:
         Args:
             filename: the file to which the object should be saved
         """
+        if type(filename) != str:
+            return None
         if filename[-4:] != ".pkl":
             filename = filename + ".pkl"
 
-        with open(filename, 'wb') as fileObject:
-            pickle.dump(self, fileObject)
+        fileObject = open(filename, 'wb')
+        pickle.dump(self, fileObject)
+        fileObject.close()
 
     @staticmethod
     def load(filename):
@@ -240,8 +243,9 @@ class DeepNeuralNetwork:
             the loaded object, or None if filename doesn't exist
         """
         try:
-            with open(filename, 'rb') as fileObject:
-                loadedObject = pickle.load(fileObject)
+            fileObject = open(filename, 'rb')
+            loadedObject = pickle.load(fileObject)
+            fileObject.close()
             return loadedObject
         except FileNotFoundError:
             return None
