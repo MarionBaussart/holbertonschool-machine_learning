@@ -440,3 +440,9 @@ Update the class DeepNeuralNetwork (based on 23-deep_neural_network.py):
     - Loads a pickled DeepNeuralNetwork object
     - filename is the file from which the object should be loaded
     - Returns: the loaded object, or None if filename doesn’t exist
+
+## 27. Update DeepNeuralNetwork
+Update the class DeepNeuralNetwork to perform multiclass classification (based on 26-deep_neural_network.py):
+
+- You will need to update the instance methods forward_prop, cost, and evaluate
+- Y is now a one-hot numpy.ndarray of shape (classes, m)
