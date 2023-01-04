@@ -13,7 +13,7 @@ def one_hot_encode(Y, classes):
         Return:
             a one-hot encoding of Y with shape (classes, m), or None on failure
     """
-    if type(Y) != np.ndarray or type(classes) != int:
+    if type(Y) != np.ndarray or type(classes) != int or classes < Y.max():
         return None
 
     hot_Y = np.eye(classes)[Y].T
