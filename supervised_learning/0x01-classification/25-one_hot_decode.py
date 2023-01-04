@@ -14,10 +14,8 @@ def one_hot_decode(one_hot):
             a numpy.ndarray with shape (m, ) containing the numeric labels
                 for each example, or None on failure
     """
-    if type(one_hot) != np.ndarray:
+    if type(one_hot) != np.ndarray or one_hot.ndim != 2:
         return None
 
     decode_one_hot = np.argmax(one_hot, axis=0)
-    if type(decode_one_hot) != np.ndarray:
-        return None
     return decode_one_hot
