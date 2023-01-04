@@ -418,3 +418,11 @@ Write a function def one_hot_encode(Y, classes): that converts a numeric label v
     - m is the number of examples
 - classes is the maximum number of classes found in Y
 - Returns: a one-hot encoding of Y with shape (classes, m), or None on failure
+
+## 25. One-Hot Decode
+Write a function def one_hot_decode(one_hot): that converts a one-hot matrix into a vector of labels:
+
+- one_hot is a one-hot encoded numpy.ndarray with shape (classes, m)
+    - classes is the maximum number of classes
+    - m is the number of examples
+- Returns: a numpy.ndarray with shape (m, ) containing the numeric labels for each example, or None on failure
