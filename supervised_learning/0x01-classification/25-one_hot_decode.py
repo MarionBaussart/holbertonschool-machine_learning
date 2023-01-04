@@ -18,4 +18,6 @@ def one_hot_decode(one_hot):
         return None
 
     decode_one_hot = np.argmax(one_hot, axis=0)
+    if type(decode_one_hot) != np.ndarray:
+        return None
     return decode_one_hot
