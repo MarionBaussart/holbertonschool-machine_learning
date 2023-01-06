@@ -243,6 +243,8 @@ class DeepNeuralNetwork:
             the loaded object, or None if filename doesn't exist
         """
         try:
+            if filename[-4:] != ".pkl":
+                filename = filename + ".pkl"
             with open(filename, 'rb') as fileObject:
                 loadedObject = pickle.load(fileObject)
                 return loadedObject
