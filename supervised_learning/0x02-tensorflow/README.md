@@ -27,3 +27,11 @@ Write the function def forward_prop(x, layer_sizes=[], activations=[]): that cre
 - activations is a list containing the activation functions for each layer of the network
 - Returns: the prediction of the network in tensor form
 For this function, you should import your create_layer function with create_layer = __import__('1-create_layer').create_layer
+
+## 3. Accuracy
+Write the function def calculate_accuracy(y, y_pred): that calculates the accuracy of a prediction:
+
+- y is a placeholder for the labels of the input data
+- y_pred is a tensor containing the network’s predictions
+- Returns: a tensor containing the decimal accuracy of the prediction
+hint: accuracy = correct_predictions / all_predictions
