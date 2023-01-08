@@ -67,4 +67,6 @@ def train(X_train, Y_train, X_valid, Y_valid, layer_sizes, activations,
             print(f"\tValidation Cost: {validation_cost}\n")
             print(f"\tValidation Accuracy: {validation_accuracy}\n")
 
+            session.run(train_op, feed_dict={x: X_train, y: Y_train})
+
         return saver.save(session, save_path)
