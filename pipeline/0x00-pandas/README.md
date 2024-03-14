@@ -1,0 +1,67 @@
+# Pandas
+- What is ``pandas``?
+
+Pandas is an open source data analysis and manipulation tool.
+- What is a ``pd.DataFrame``? How do you create one?
+
+A pd.DataFrame is a 2-dimensional labeled data structure with columns of potentially different types.
+- What is a ``pd.Series``? How do you create one?
+- How to load data from a file
+- How to perform indexing on a ``pd.DataFrame``
+- How to use hierarchical indexing with a ``pd.DataFrame``
+- How to slice a ``pd.DataFrame``
+- How to reassign columns
+- How to sort a ``pd.DataFrame``
+- How to use boolean logic with a ``pd.DataFrame``
+- How to merge/concatenate/join ``pd.DataFrame``s
+- How to get statistical information from a ``pd.DataFrame``
+- How to visualize a ``pd.DataFrame``
+
+
+# 0. From Numpy
+Write a function ``def from_numpy(array)``: that creates a ``pd.DataFrame`` from a ``np.ndarray``:
+
+- ``array`` is the ``np.ndarray`` from which you should create the ``pd.DataFrame``
+- The columns of the ``pd.DataFrame`` should be labeled in alphabetical order and capitalized. There will not be more than 26 columns.
+- Returns: the newly created ``pd.DataFrame``
+
+# 1. From Dictionary
+Write a python script that created a ``pd.DataFrame`` from a dictionary:
+
+- The first column should be labeled ``First`` and have the values ``0.0``, ``0.5``, ``1.0``, and ``1.5``
+- The second column should be labeled ``Second`` and have the values ``one``, ``two``, ``three``, ``four``
+- The rows should be labeled ``A``, ``B``, ``C``, and ``D``, respectively
+- The ``pd.DataFrame`` should be saved into the variable ``df``
+
+# 2. From File
+Write a function ``def from_file(filename, delimiter)``: that loads data from a file as a ``pd.DataFrame``:
+
+- ``filename`` is the file to load from
+- ``delimiter`` is the column separator
+- Returns: the loaded ``pd.DataFrame``
+
+# 3. Rename
+Complete the script below to perform the following:
+
+- Rename the column ``Timestamp`` to ``Datetime``
+- Convert the timestamp values to datatime values
+- Display only the ``Datetime`` and ``Close`` columns
+
+# 4. To Numpy
+Complete the following script to take the last 10 rows of the columns ``High`` and ``Close`` and convert them into a ``numpy.ndarray``
+
+# 5. Slice
+Complete the following script to slice the ``pd.DataFrame`` along the columns ``High``, ``Low``, ``Close``, and ``Volume_BTC``, taking every 60th row
+
+# 6. Flip it and Switch it
+Complete the following script to alter the ``pd.DataFrame`` such that the rows and columns are transposed and the data is sorted in reverse chronological order
+
+# 7. Sort
+Complete the following script to sort the ``pd.DataFrame`` by the ``High`` price in descending order
+
+# Versions
+Python 3.9
+
+numpy 1.23.5
+
+gym 0.25.2
