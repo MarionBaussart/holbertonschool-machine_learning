@@ -24,4 +24,4 @@ if __name__ == '__main__':
                      reverse=True)
 
     for rocket, nb_launches in rockets:
-        print(f'{rocket}: {nb_launches}')
+        print('{}: {}'.format(rocket, nb_launches))
