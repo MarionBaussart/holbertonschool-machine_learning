@@ -2,9 +2,9 @@
 """
 script that prints the location of a specific user, using GitHub API
 """
-from datetime import datetime
 import requests
 import sys
+import time
 
 
 if __name__ == '__main__':
@@ -18,9 +18,9 @@ if __name__ == '__main__':
 
     # status code is 403
     elif requests.get(url).status_code == 403:
-        reset_limit = int(requests.get(url).headers['X-RateLimit-Limit'])
-        now = int(datetime.now().minute)
-        reset = reset_limit - now
+        reset_limit = int(requests.get(url).headers['X-RateLimit-Reset'])
+        now = int(time.time())
+        reset = int((reset_limit - now) / 60)
         print('Reset in ', reset, ' min')
 
     else:
