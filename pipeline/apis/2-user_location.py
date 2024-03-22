@@ -21,7 +21,7 @@ if __name__ == '__main__':
         reset_limit = int(requests.get(url).headers['X-RateLimit-Reset'])
         now = int(time.time())
         reset = int((reset_limit - now) / 60)
-        print(f'Reset in {reset} min')
+        print('Reset in', reset, 'min')
 
     else:
         print(res['location'])
