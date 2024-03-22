@@ -27,5 +27,8 @@ if __name__ == '__main__':
     launchpad_locality = first_launch['launch_site']['site_name_long']
     date = first_launch['launch_date_utc']
 
-    print(f'{launch_name} ({date}) {rocket_name} - \
-{launchpad_name} ({launchpad_locality})')
+    print('{} ({}) {} - {} ({})'.format(launch_name,
+                                        date,
+                                        rocket_name,
+                                        launchpad_name,
+                                        launchpad_locality))
