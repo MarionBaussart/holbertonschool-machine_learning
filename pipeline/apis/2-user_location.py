@@ -13,8 +13,8 @@ if __name__ == '__main__':
     res = requests.get(url).json()
 
     # user doesn’t exist
-    if not res:
-        print(res['message'])
+    if requests.get(url).status_code == 404:
+        print('Not found')
 
     # status code is 403
     elif requests.get(url).status_code == 403:
