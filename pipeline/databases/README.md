@@ -31,5 +31,11 @@ Write a script that creates a table called ``first_table`` in the current databa
 - If the table ``first_table`` already exists, your script should not fail
 - You are not allowed to use the ``SELECT`` or ``SHOW`` statements
 
+## 2. List all in table
+Write a script that lists all rows of the table ``first_table`` in your MySQL server.
+
+- All fields should be printed
+- The database name will be passed as an argument of the ``mysql`` command
+
 # Versions
 Python 3.9
