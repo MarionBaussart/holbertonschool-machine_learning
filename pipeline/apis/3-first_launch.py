@@ -30,7 +30,7 @@ if __name__ == '__main__':
             launchpad_id = first_launch['launchpad']
 
     launch_name = first_launch['name']
-    date = first_launch['date_utc']
+    date = first_launch['date_local']
 
     for rocket in res_rocket:
         if rocket['id'] == rocket_id:
