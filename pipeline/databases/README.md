@@ -52,5 +52,11 @@ Write a script that lists all records with a ``score >= 10`` in the table ``seco
 - Records should be ordered by score (top first)
 - The database name will be passed as an argument of the ``mysql`` command
 
+## 5. Average
+Write a script that computes the score average of all records in the table ``second_table`` in your MySQL server.
+
+- The result column name should be ``average``
+- The database name will be passed as an argument of the ``mysql`` command
+
 # Versions
 Python 3.9
