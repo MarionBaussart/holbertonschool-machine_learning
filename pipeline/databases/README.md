@@ -37,5 +37,13 @@ Write a script that lists all rows of the table ``first_table`` in your MySQL se
 - All fields should be printed
 - The database name will be passed as an argument of the ``mysql`` command
 
+## 3. First add
+Write a script that inserts a new row in the table ``first_table`` in your MySQL server.
+
+- New row:
+    - ``id`` = ``89``
+    - ``name`` = ``Holberton School``
+- The database name will be passed as an argument of the ``mysql`` command
+
 # Versions
 Python 3.9
