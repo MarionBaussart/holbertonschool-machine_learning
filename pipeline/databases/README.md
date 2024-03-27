@@ -58,5 +58,10 @@ Write a script that computes the score average of all records in the table ``sec
 - The result column name should be ``average``
 - The database name will be passed as an argument of the ``mysql`` command
 
+## 6. Temperatures #0
+Import in ``hbtn_0c_0`` database this table dump: [download](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/272/temperatures.sql)
+
+Write a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+
 # Versions
 Python 3.9
