@@ -63,5 +63,10 @@ Import in ``hbtn_0c_0`` database this table dump: [download](https://s3.eu-west-
 
 Write a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
 
+## 7. Temperatures #2
+Import in ``hbtn_0c_0`` database this table dump: [download](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/272/temperatures.sql) (same as ``Temperatures #0``)
+
+Write a script that displays the max temperature of each state (ordered by State name).
+
 # Versions
 Python 3.9
