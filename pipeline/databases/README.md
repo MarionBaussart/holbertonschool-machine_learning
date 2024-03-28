@@ -168,5 +168,27 @@ Write a script that lists all shows contained in ``hbtn_0d_tvshows`` without a g
 - You can use only one ``SELECT`` statement
 - The database name will be passed as an argument of the ``mysql`` command
 
+```
+marion@Michelle:~/$ cat 9-no_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title   genre_id
+Better Call Saul    NULL
+Homeland    NULL
+marion@Michelle:~/$ 
+```
+
+## 10. Number of shows by genre
+Import the database dump from ``hbtn_0d_tvshows`` to your MySQL server: [download](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql)
+
+Write a script that lists all genres from ``hbtn_0d_tvshows`` and displays the number of shows linked to each.
+
+- Each record should display: ``<TV Show genre>`` - ``<Number of shows linked to this genre>``
+- First column must be called ``genre``
+- Second column must be called ``number_of_shows``
+- Don’t display a genre that doesn’t have any shows linked
+- Results must be sorted in descending order by the number of shows linked
+- You can use only one ``SELECT`` statement
+- The database name will be passed as an argument of the ``mysql`` command
+
 # Versions
 Python 3.9
