@@ -220,6 +220,8 @@ Write a SQL script that creates a table ``users`` following these requirements:
 - If the table already exists, your script should not fail
 - Your script can be executed on any database
 
+**Context**: *Make an attribute unique directly in the table schema will enforced your business rules and avoid bugs in your application*
+
 ## 14. In and not out
 Write a SQL script that creates a table ``users`` following these requirements:
 
@@ -230,6 +232,17 @@ Write a SQL script that creates a table ``users`` following these requirements:
     - ``country``, enumeration of countries: ``US``, ``CO`` and ``TN``, never null (= default will be the first element of the enumeration, here ``US``)
 - If the table already exists, your script should not fail
 - Your script can be executed on any database
+
+## 15. Best band ever!
+Write a SQL script that ranks country origins of bands, ordered by the number of (non-unique) fans
+
+**Requirements:**
+
+- Import this table dump: [metal_bands.sql.zip](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2020/6/ab2979f058de215f0f2ae5b052739e76d3c02ac5.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240328%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240328T205843Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=99fb2106108281795d90de289658975e098e89e1cf579ea08f036d2740c5e0ed)
+- Column names must be: ``origin`` and ``nb_fans``
+- Your script can be executed on any database
+
+**Context:** *Calculate/compute something is always power intensive… better to distribute the load!*
 
 # Versions
 Python 3.9
