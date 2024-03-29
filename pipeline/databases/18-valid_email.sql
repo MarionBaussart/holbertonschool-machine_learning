@@ -5,7 +5,7 @@ CREATE TRIGGER reset_valid_email
     FOR EACH ROW
     BEGIN
         IF New.email != Old.email THEN
-            SET New.valid_email = NOT(Old.valid_email);
+            SET New.valid_email = 0;
         END IF;
     END $$
 DELIMITER ;
