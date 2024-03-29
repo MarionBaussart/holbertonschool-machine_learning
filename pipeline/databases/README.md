@@ -287,5 +287,10 @@ pear    2
 marion@Michelle:~$
 ```
 
+## 18. Email validation to sent
+Write a SQL script that creates a trigger that resets the attribute ``valid_email`` only when the ``email`` has been changed.
+
+**Context**: *Nothing related to MySQL, but perfect for user email validation - distribute the logic to the database itself!*
+
 # Versions
 Python 3.9
