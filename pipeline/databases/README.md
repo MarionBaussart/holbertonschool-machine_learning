@@ -244,5 +244,17 @@ Write a SQL script that ranks country origins of bands, ordered by the number of
 
 **Context:** *Calculate/compute something is always power intensive… better to distribute the load!*
 
+## 16. Old school band
+Write a SQL script that lists all bands with ``Glam rock`` as their main style, ranked by their longevity
+
+**Requirements:**
+
+- Import this table dump: [metal_bands.sql.zip](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2020/6/ab2979f058de215f0f2ae5b052739e76d3c02ac5.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240328%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240328T205843Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=99fb2106108281795d90de289658975e098e89e1cf579ea08f036d2740c5e0ed)
+- Column names must be:
+    - ``band_name``
+    - ``lifespan`` until 2020 (in years)
+- You should use attributes ``formed`` and ``split`` for computing the ``lifespan``
+- Your script can be executed on any database
+
 # Versions
 Python 3.9
