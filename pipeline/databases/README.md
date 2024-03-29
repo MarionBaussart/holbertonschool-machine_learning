@@ -256,5 +256,36 @@ Write a SQL script that lists all bands with ``Glam rock`` as their main style, 
 - You should use attributes ``formed`` and ``split`` for computing the ``lifespan``
 - Your script can be executed on any database
 
+## 17. Buy buy buy
+Write a SQL script that creates a trigger that decreases the quantity of an item after adding a new order.
+
+Quantity in the table ``items`` can be negative.
+
+**Context:** *Updating multiple tables for one action from your application can generate issue: network disconnection, crash, etc… to keep your data in a good shape, let MySQL do it for you!*
+
+```
+marion@Michelle:~$ cat 17-init.sql | mysql -uroot -p holberton 
+Enter password:
+marion@Michelle:~$ cat 17-store.sql | mysql -uroot -p holberton 
+Enter password:
+marion@Michelle:~$ cat 17-main.sql | mysql -uroot -p holberton 
+Enter password: 
+name    quantity
+apple   10
+pineapple   10
+pear    10
+--
+--
+name    quantity
+apple   6
+pineapple   10
+pear    8
+item_name   number
+apple   1
+apple   3
+pear    2
+marion@Michelle:~$
+```
+
 # Versions
 Python 3.9
