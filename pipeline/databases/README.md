@@ -311,6 +311,17 @@ Write a SQL script that creates a stored procedure ``ComputeAverageScoreForUser`
 - Procedure ``ComputeAverageScoreForUser`` is taking 1 input:
     - ``user_id``, a ``users.id`` value (you can assume ``user_id`` is linked to an existing users)
 
+## 21. Safe divide
+Write a SQL script that creates a function ``SafeDiv`` that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0.
+
+**Requirements:**
+
+- You must create a function
+- The function ``SafeDiv`` takes 2 arguments:
+    - ``a``, INT
+    - ``b``, INT
+- And returns ``a / b`` or 0 if ``b == 0``
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
