@@ -303,6 +303,14 @@ Write a SQL script that creates a stored procedure ``AddBonus`` that adds a new 
     - ``score``, the score value for the correction
 **Context:** *Write code in SQL is a nice level up!*
 
+## 20. Average score
+Write a SQL script that creates a stored procedure ``ComputeAverageScoreForUser`` that computes and store the average score for a student.
+
+**Requirements:**
+
+- Procedure ``ComputeAverageScoreForUser`` is taking 1 input:
+    - ``user_id``, a ``users.id`` value (you can assume ``user_id`` is linked to an existing users)
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
