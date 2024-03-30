@@ -292,5 +292,17 @@ Write a SQL script that creates a trigger that resets the attribute ``valid_emai
 
 **Context**: *Nothing related to MySQL, but perfect for user email validation - distribute the logic to the database itself!*
 
+## 19. Add bonus
+Write a SQL script that creates a stored procedure ``AddBonus`` that adds a new correction for a student.
+
+**Requirements:**
+
+- Procedure ``AddBonus`` is taking 3 inputs (in this order):
+    - ``user_id``, a ``users.id`` value (you can assume ``user_id`` is linked to an existing ``users``)
+    - ``project_name``, a new or already exists ``projects`` - if no ``projects.name`` found in the table, you should create it
+    - ``score``, the score value for the correction
+**Context:** *Write code in SQL is a nice level up!*
+
 # Versions
 Python 3.9
+mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
