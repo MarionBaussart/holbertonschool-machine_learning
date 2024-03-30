@@ -322,6 +322,9 @@ Write a SQL script that creates a function ``SafeDiv`` that divides (and returns
     - ``b``, INT
 - And returns ``a / b`` or 0 if ``b == 0``
 
+## 22. List all databases
+Write a script that lists all databases in MongoDB.
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
