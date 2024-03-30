@@ -373,6 +373,11 @@ Write a script that lists all documents with ``name="Holberton school"`` in the 
 
 - The database name will be passed as option of ``mongo`` command
 
+## 27. Count
+Write a script that displays the number of documents in the collection ``school``:
+
+- The database name will be passed as option of ``mongo`` command
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
