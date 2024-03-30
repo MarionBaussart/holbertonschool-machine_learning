@@ -363,6 +363,11 @@ Write a script that inserts a document in the collection ``school``:
 - The document must have one attribute ``name`` with value “Holberton school”
 - The database name will be passed as option of ``mongo`` command
 
+## 25. All documents
+Write a script that lists all documents in the collection ``school``:
+
+- The database name will be passed as option of ``mongo`` command
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
