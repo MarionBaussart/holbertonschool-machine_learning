@@ -35,6 +35,35 @@ id  name
 $
 ```
 
+## Install MongoDB
+Import public key of MongoDB:
+
+```sudo apt-get install gnupg```
+
+```wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -```
+
+Create list file for packages:
+
+```echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.2.list```
+
+```sudo apt-get update```
+
+Install packages:
+
+```sudo apt-get install -y mongodb-org```
+
+Start server:
+
+```sudo systemctl start mongod```
+
+Check if it's active:
+
+```sudo systemctl status mongod```
+
+Automatic launch:
+
+```sudo systemctl enable mongod```
+
 ## 0. Create a database
 Write a script that creates the database ``db_0`` in your MySQL server.
 
@@ -324,6 +353,9 @@ Write a SQL script that creates a function ``SafeDiv`` that divides (and returns
 
 ## 22. List all databases
 Write a script that lists all databases in MongoDB.
+
+## 23. Create a database
+Write a script that creates or uses the database ``my_db``.
 
 # Versions
 Python 3.9
