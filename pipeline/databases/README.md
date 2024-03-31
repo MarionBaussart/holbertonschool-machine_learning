@@ -397,6 +397,13 @@ Write a Python function that lists all documents in a collection:
 - Return an empty list if no document in the collection
 - ``mongo_collection`` will be the ``pymongo`` collection object
 
+## 31. Insert a document in Python
+Write a Python function that inserts a new document in a collection based on kwargs:
+
+- Prototype: ``def insert_school(mongo_collection, **kwargs):``
+- ``mongo_collection`` will be the ``pymongo`` collection object
+- Returns the new ``_id``
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
