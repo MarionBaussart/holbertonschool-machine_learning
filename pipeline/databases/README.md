@@ -412,6 +412,13 @@ Write a Python function that changes all topics of a school document based on th
 - ``name`` (string) will be the school name to update
 - ``topics`` (list of strings) will be the list of topics approached in the school
 
+## 33. Where can I learn Python?
+Write a Python function that returns the list of school having a specific topic:
+
+- Prototype: ``def schools_by_topic(mongo_collection, topic):``
+- ``mongo_collection`` will be the ``pymongo`` collection object
+- ``topic`` (string) will be topic searched
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
