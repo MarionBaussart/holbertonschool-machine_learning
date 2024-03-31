@@ -404,6 +404,14 @@ Write a Python function that inserts a new document in a collection based on kwa
 - ``mongo_collection`` will be the ``pymongo`` collection object
 - Returns the new ``_id``
 
+## 32. Change school topics
+Write a Python function that changes all topics of a school document based on the name:
+
+- Prototype: ``def update_topics(mongo_collection, name, topics):``
+- ``mongo_collection`` will be the ``pymongo`` collection object
+- ``name`` (string) will be the school name to update
+- ``topics`` (list of strings) will be the list of topics approached in the school
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))

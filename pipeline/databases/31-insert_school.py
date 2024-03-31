@@ -2,7 +2,6 @@
 """
 module containing function insert_school
 """
-import pymongo
 
 
 def insert_school(mongo_collection, **kwargs):
@@ -12,9 +11,5 @@ def insert_school(mongo_collection, **kwargs):
         the new _id
     """
     new_id = mongo_collection.insert_one(kwargs).inserted_id
-    
-    # for key, value in kwargs:
-    #     value = kwargs[key]
-    #     new_id = mongo_collection.insert_one({key:value}).inserted_id
 
     return new_id
