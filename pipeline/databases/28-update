@@ -1,5 +1,5 @@
 // script that adds a new attribute to a document in the collection school
-db.school.updateMany(
+db.school.update(
     {"name": "Holberton school"}, // query
     {'$set': {"address": "972 Mission street"}},
     false, // not insert new document if not match
