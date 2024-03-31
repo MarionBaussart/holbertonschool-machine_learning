@@ -419,6 +419,52 @@ Write a Python function that returns the list of school having a specific topic:
 - ``mongo_collection`` will be the ``pymongo`` collection object
 - ``topic`` (string) will be topic searched
 
+## 34. Log stats
+Write a Python script that provides some stats about Nginx logs stored in MongoDB:
+
+- Database: ``logs``
+- Collection: ``nginx``
+- Display (same as the example):
+    - first line: ``x logs`` where ``x`` is the number of documents in this collection
+    - second line: ``Methods:``
+    - 5 lines with the number of documents with the ``method`` = ``["GET", "POST", "PUT", "PATCH", "DELETE"]`` in this order (see example below - warning: it’s a tabulation before each line)
+    - one line with the number of documents with:
+        - ``method=GET``
+        - ``path=/status``
+You can use this dump as data sample: [dump.zip](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2020/6/645541f867bb79ae47b7a80922e9a48604a569b9.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240331%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240331T172816Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=a2893378b4f15534ed7a9d1a3820ca79055d748f70b95d8a5ebbf380105f0afc)
+
+The output of your script **must be exactly the same as the example**
+
+```
+marion@Michelle:~/$ curl -o dump.zip -s "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-webstack/411/dump.zip"
+marion@Michelle:~/$ unzip dump.zip
+Archive:  dump.zip
+   creating: dump/
+   creating: dump/logs/
+  inflating: dump/logs/nginx.metadata.json  
+  inflating: dump/logs/nginx.bson
+marion@Michelle:~/$ mongorestore dump
+2024-03-31T21:42:19.685+0200    preparing collections to restore from
+2024-03-31T21:42:19.686+0200    reading metadata for logs.nginx from dump/logs/nginx.metadata.json
+2024-03-31T21:42:19.737+0200    restoring logs.nginx from dump/logs/nginx.bson
+2024-03-31T21:42:21.486+0200    finished restoring logs.nginx (94778 documents, 0 failures)
+2024-03-31T21:42:21.486+0200    no indexes to restore for collection logs.nginx
+2024-03-31T21:42:21.486+0200    94778 document(s) restored successfully. 0 document(s) failed to restore.
+marion@Michelle:~/$ ./34-log_stats.py 
+94778 logs
+Methods:
+    method GET: 93842
+    method POST: 229
+    method PUT: 0
+    method PATCH: 0
+    method DELETE: 0
+47415 status check
+marion@Michelle:~/$ 
+```
+
 # Versions
 Python 3.9
+
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
+
+pymongo                4.6.3
