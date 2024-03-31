@@ -378,6 +378,13 @@ Write a script that displays the number of documents in the collection ``school`
 
 - The database name will be passed as option of ``mongo`` command
 
+## 28. Update
+Write a script that adds a new attribute to a document in the collection ``school``:
+
+- The script should update only document with ``name="Holberton school"`` (all of them)
+- The update should add the attribute ``address`` with the value ``“972 Mission street”``
+- The database name will be passed as option of ``mongo`` command
+
 # Versions
 Python 3.9
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
