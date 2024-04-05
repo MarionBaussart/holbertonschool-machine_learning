@@ -471,6 +471,14 @@ Write a SQL script that creates an index ``idx_name_first`` on the table ``names
 - Only the first letter of ``name`` must be indexed
 **Context:** *Index is not the solution for any performance issue, but well used, it’s really powerful!*
 
+## 36. Optimize search and score
+Write a SQL script that creates an index ``idx_name_first_score`` on the table ``names`` and the first letter of ``name`` and the ``score``.
+
+**Requirements:**
+
+- Import this table dump: [names.sql.zip](https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/632/names.sql.zip)
+- Only the first letter of ``name`` AND ``score`` must be indexed
+
 # Versions
 Python 3.9
 
